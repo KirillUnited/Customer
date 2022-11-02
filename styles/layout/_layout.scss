@@ -1,0 +1,70 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: var(--text-color-2);
+    font-family: var(--font);
+    font-style: normal;
+    font-weight: 400;
+    background-color: var(--body-bg-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vw-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.vw-content {
+    flex: 1 0 auto;
+}
+
+.vw-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: Min(100% - #{getMinMax(48px, 48px)}, #{getrem($base-container)});
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.vw-section {
+    position: relative;
+
+    &-header {
+        text-align: center;
+        padding-top: getMinMax(25px, 40px);
+        padding-bottom: getMinMax(10px, 20px);
+    }
+
+    &-content {
+        padding-top: getMinMax(25px, 40px);
+        padding-bottom: getMinMax(25px, 40px);
+    }
+
+    @include less-sm() {
+        &-banner {
+            padding-top: getMinMax(10px, 10px);
+            padding-bottom: getMinMax(25px, 25px);
+        }
+    }
+    @include less-xs() {
+        &.has-slider {
+            .vw-container {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include less-sm {
+    .vw-container {
+        max-width: 100%;
+    }
+}

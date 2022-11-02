@@ -1,0 +1,32 @@
+a.button,
+.button {
+    $fontSize: getMinMax(16px, 16px);
+    $height: getMinMax(44px, 44px);
+    --border-radius: #{calc(99/16)*1em};
+    --border-color-invert: rgba(0, 0, 0, 0.04);
+    --bg-color-invert-hover: rgba(0, 0, 0, 0.2);
+
+    @include button($fontSize, $height);
+    font-family: 'Syne', sans-serif;
+    background: var(--bg-color-accent);
+    background-clip: padding-box;
+    border-radius: var(--border-radius);
+    border: none;
+
+    &:hover,
+    &:focus {
+        background: var(--bg-color-accent-hover);
+        background-clip: padding-box;
+    }
+
+    &-invert {
+        color: var(--text-color-1);
+        background: transparent;
+        border: 1px solid var(--border-color-invert);
+
+        &:hover,
+        &:focus {
+            background: var(--bg-color-invert-hover);
+        }
+    }
+}
