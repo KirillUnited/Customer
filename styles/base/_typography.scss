@@ -4,7 +4,7 @@
     .vw-#{$type} {
         font-family: var(--font-main);
         color: var(--text-color-1);
-        font-weight: 700;
+        font-weight: 500;
         line-height: 116%;
         margin-bottom: 0.4em;
         // Help prevent overflow of long words/names/URLs
@@ -50,11 +50,12 @@ li,
     font-size: getrem($text-font-size);
     font-size: Min(getvw($text-font-size-sm), getrem($text-font-size));
     font-weight: 400;
-    line-height: calc(24px/$text-font-size);
+    line-height: calc(20px/$text-font-size);
+    letter-spacing: 0.0015em;
 }
 
 p {
-    margin: 0 0 calc(24px / $text-font-size) * 1em;
+    margin: 0 0 calc(20px / $text-font-size) * 1em;
     &:last-child {
         margin-bottom: 0;
     }
