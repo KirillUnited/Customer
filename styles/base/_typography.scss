@@ -7,6 +7,7 @@
         font-weight: 500;
         line-height: 116%;
         margin-bottom: 0.4em;
+        text-transform: capitalize;
         // Help prevent overflow of long words/names/URLs
         // word-break: break-word; // See reset.css
         // Optional, not supported for all languages:
@@ -62,7 +63,7 @@ p {
 }
 
 a {
-color: var(--text-color-1);
+color: var(--color-green);
 }
 a,
 a:active,

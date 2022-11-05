@@ -1,0 +1,55 @@
+@import "../utilities";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: Min(100% - #{getMinMax(48px, 48px)}, #{getrem($base-container)});
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section {
+    position: relative;
+
+    &-header {
+        text-align: center;
+        padding-top: getMinMax(25px, 40px);
+        padding-bottom: getMinMax(10px, 20px);
+    }
+
+    &-content {
+        padding-top: getMinMax(25px, 40px);
+        padding-bottom: getMinMax(25px, 40px);
+    }
+
+    @include less-sm() {
+        &-banner {
+            padding-top: getMinMax(10px, 10px);
+            padding-bottom: getMinMax(25px, 25px);
+        }
+    }
+    @include less-xs() {
+        &.has-slider {
+            .container {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include less-sm {
+    .container {
+        max-width: 100%;
+    }
+}

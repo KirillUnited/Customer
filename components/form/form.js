@@ -1,9 +1,9 @@
-import React from 'react';
+import styles from "../../styles/components/Form.module.scss";
 
 const Form = ({id, children}) => {
     return (
-        <form className="form" id={id} method="POST" action="">
-            <fieldset className="form-fieldset">
+        <form className={`${styles["form"]}`} id={id} method="POST" action="">
+            <fieldset className={`${styles["form-fieldset"]}`}>
                 {children}
             </fieldset>
         </form>
@@ -12,7 +12,7 @@ const Form = ({id, children}) => {
 
 const FormInput = ({type, id, children,...rest}) => {
     return (
-        <div className="form-input">
+        <div className={`${styles["form-input"]}`}>
             <input
                 type={type}
                 id={id}
