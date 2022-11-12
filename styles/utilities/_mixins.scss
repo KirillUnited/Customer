@@ -210,21 +210,21 @@
     min-width: 11ch;
     min-height: $height;
     padding: 0.25em 1em;
-    transition: 180ms ease-in-out;
-    transition-property: background, border;
-    background-color: var(--color-1);
-    color: var(--color-contrast);
+    background-color: var(--bg-color, transparent);
+    color: var(--color, #000);
     font-size: $fontSize;
-    font-weight: 700;
+    font-weight: var(--font-weight, 700);
     font-stretch: normal;
     font-style: normal;
-    letter-spacing: normal;
+    letter-spacing: 1px;
     line-height: 1.1;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     appearance: none;
     border-color: transparent;
+    transition: 180ms ease-in-out;
+    transition-property: color, background, border;
 
     @media screen and (-ms-high-contrast: active) {
         border: 2px solid currentColor;
@@ -233,20 +233,6 @@
     &:focus {
         outline-color: transparent;
         outline-style: solid;
-    }
-
-    &-danger {
-        color: var(--colorDanger);
-
-        &-full {
-            color: #ffffff;
-            background-color: var(--colorDanger);
-        }
-    }
-
-    &-primary {
-        color: #ffffff;
-        background-color: var(--colorPrimary);
     }
 
     &-icon {

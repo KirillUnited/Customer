@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Button from '../components/button/button'
 import Form, { FormInput } from '../components/form/form'
 import Layout, { Section } from '../components/layout'
 
@@ -25,6 +26,18 @@ export default function Home() {
             <FormInput id={`register_form_password`} type={`password`}>
               <label>Password</label>
             </FormInput>
+            <Button type={`submit`} state={`primary`}>
+              Primary
+            </Button>
+            <Button type={`submit`} state={`secondary`}>
+              Secondary
+            </Button>
+            <Button type={`submit`} state={`invert`}>
+              
+            </Button>
+            <Button type={`submit`} disabled>
+              Disabled
+            </Button>
           </Form>
         </Section>
       </Layout>

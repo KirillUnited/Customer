@@ -1,8 +1,8 @@
-import React from 'react';
+import styles from "../../styles/components/Button.module.scss";
 
-const Button = ({ children, state, ...rest }) => {
-    return (        
-        <button className={`button ${state || ''}`} {...rest}>{children}</button>
+const Button = ({ children, state = null, ...rest }) => {
+    return (
+        <button className={`${styles["btn"]} ${state ? styles["btn-" + state] : ""}`} {...rest}>{children || "Button"}</button>
     )
 };
 
