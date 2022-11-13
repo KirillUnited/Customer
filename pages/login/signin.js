@@ -50,6 +50,7 @@ export default function SignIn() {
                             width={500}
                             height={500}
                             alt="Login"
+                            placeholder={`blur`}
                         />
                     </div>
                 </Section>
