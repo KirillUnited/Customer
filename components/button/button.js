@@ -1,4 +1,5 @@
 import styles from "../../styles/components/Button.module.scss";
+import React from "react";
 
 const Button = ({ children, state = null, ...rest }) => {
     return (

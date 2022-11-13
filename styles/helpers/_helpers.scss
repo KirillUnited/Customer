@@ -50,6 +50,23 @@
     @include truncate();
 }
 
+.text-line-through {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 19px;
+
+    &:after,
+    &:before{
+        display: block;
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: var(--color-grey);
+    }
+}
+
 .text-clamp {
     --lines: 3;
     @include line-clamp(var(--lines));

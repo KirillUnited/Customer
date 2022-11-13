@@ -15,7 +15,7 @@ const Layout = ({children}) => {
     )
 };
 
-const Section = ({children, content = "content", ...rest}) => {
+const Section = ({children, content = "inner", ...rest}) => {
     return (
         <section className={`${styles["section"]} ${rest.classes? rest.classes:""}`} {...rest}>
             <div className={`${styles["container"]}`}>

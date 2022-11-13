@@ -51,20 +51,23 @@ li,
     font-size: getrem($text-font-size);
     font-size: Min(getvw($text-font-size-sm), getrem($text-font-size));
     font-weight: 400;
-    line-height: calc(20px/$text-font-size);
+    line-height: calc(20px / $text-font-size);
     letter-spacing: 0.0015em;
 }
 
 p {
     margin: 0 0 calc(20px / $text-font-size) * 1em;
+
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 a {
-color: var(--color-green);
+    font-family: 'Inter', sans-serif;
+    color: var(--color-green);
 }
+
 a,
 a:active,
 a:hover,

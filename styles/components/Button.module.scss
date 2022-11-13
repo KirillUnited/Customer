@@ -7,6 +7,7 @@ a.btn,
 
     --border-radius: #{calc(8/14)*1em};
     --border-color-invert: var(--color-green);
+    --font-weight: 500;
 
     @include button($fontSize, $height);
 

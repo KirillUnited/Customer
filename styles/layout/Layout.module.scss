@@ -33,6 +33,10 @@
         padding-bottom: getMinMax(25px, 40px);
     }
 
+    &-inner {
+        position: relative;
+    }
+
     @include less-sm() {
         &-banner {
             padding-top: getMinMax(10px, 10px);

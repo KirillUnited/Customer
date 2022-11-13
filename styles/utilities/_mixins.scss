@@ -28,6 +28,36 @@
     }
 }
 
+@mixin input-field($font-size: $base) {
+    --font-size: 16;
+    --color: var(--color-text-body);
+    --bg-color: #FFFFFF;
+    --border-radius: #{calc(8px/$font-size)*1em};
+    --border-color: #C2C9D1;
+    --min-height: 48px;
+
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: var(--min-height);
+    color: var(--color);
+    font-family: var(--font-main), sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: getMinMax($font-size, $font-size);
+    line-height: calc(20px/$font-size)*1em;
+    padding: calc(5px / $font-size) * 1em calc(12px / $font-size) * 1em;
+    background-color: var(--bg-color);
+    transition: all 180ms ease-in-out;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
 // placeholders
 @mixin input-placeholder {
     &.placeholder {
