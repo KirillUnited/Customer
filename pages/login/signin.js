@@ -42,7 +42,7 @@ export default function SignIn() {
                             <Button type={`submit`} state={`primary`}>
                                 SIGN IN
                             </Button>
-                            <p>Don’t have an account? <Link href="/">Register Here</Link></p>
+                            <p>Don’t have an account? <Link href={`/login/signup`}>Register Here</Link></p>
                         </Form>
                         <Image
                             className={`${styles["inner-img"]}`}

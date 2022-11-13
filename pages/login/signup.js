@@ -69,7 +69,7 @@ function SignUp() {
                             <Button type={`submit`} state={`primary`}>
                                 REGISTER
                             </Button>
-                            <p>Already have an account? <Link href="/">Sign In</Link></p>
+                            <p>Already have an account? <Link href={`/login/signin`}>Sign In</Link></p>
                         </Form>
                         <Image
                             className={`${styles["inner-img"]}`}
