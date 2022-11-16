@@ -7,17 +7,26 @@ import LoginBg from "../../images/login/login-bg.png"
 import styles from "../../styles/pages/login/Login.module.scss";
 import Link from "next/link";
 import {Form, FormInput} from "./signup";
+import logo from "../../images/icons/logo.svg";
+import pswdIcon from "../../images/icons/Eye.svg";
 
 export default function SignIn() {
     return (
         <>
             <Head>
-                <title>Quicket Customer Account</title>
+                <title>Sign In | Quicket Customer Account</title>
                 <meta name="description" content="Quicket Customer Account"/>
             </Head>
-            <Layout>
+            <Layout header={false} footer={false}>
                 <Section>
                     <div className={`${styles["inner"]}`}>
+                        <Image
+                            className={`${styles["qkt-logo"]}`}
+                            src={logo}
+                            width={170}
+                            height={60}
+                            alt={`Logo`}
+                        />
                         <Form
                             className={`${styles["inner-form"]}`}
                             id={`register_form`}
@@ -30,11 +39,23 @@ export default function SignIn() {
                             }
                             fieldset={
                                 <>
-                                    <FormInput id={`register_form_email`} type={`email`}>
-                                        Email
+                                    <FormInput
+                                        id={`register_form_email`}
+                                        type={`email`}
+                                        label="Email"
+                                        required>
                                     </FormInput>
-                                    <FormInput id={`register_form_password`} type={`password`}>
-                                        Password
+                                    <FormInput
+                                        id={`register_form_password`}
+                                        type={`password`}
+                                        label="Password"
+                                        required>
+                                        <Image
+                                            src={pswdIcon}
+                                            width={20}
+                                            height={20}
+                                            className={`${styles["form-input-icon"]}`}
+                                        />
                                     </FormInput>
                                 </>
                             }

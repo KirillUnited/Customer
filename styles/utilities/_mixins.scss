@@ -44,7 +44,7 @@
     font-family: var(--font-main), sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: getMinMax($font-size, $font-size);
+    font-size: inherit;
     line-height: calc(20px/$font-size)*1em;
     padding: calc(5px / $font-size) * 1em calc(12px / $font-size) * 1em;
     background-color: var(--bg-color);

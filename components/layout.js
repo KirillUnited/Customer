@@ -1,23 +1,21 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-
-// import Header from "./header/header";
-// import Footer from "./footer/footer";
+import Header from "./header";
+import Footer from "./footer";
 import styles from "../styles/layout/Layout.module.scss";
 
-const Layout = ({children}) => {
+const Layout = ({children, header = true, footer = true}) => {
     return (
         <div className={`${styles["wrapper"]}`}>
-            {/* <Header/> */}
+            {header && <Header/>}
             <main className={`${styles["content"]}`}>{children}</main>
-            {/* <Footer/> */}
+            {footer && <Footer/>}
         </div>
     )
 };
 
 const Section = ({children, content = "inner", ...rest}) => {
     return (
-        <section className={`${styles["section"]} ${rest.classes? rest.classes:""}`} {...rest}>
+        <section className={`${styles["section"]} ${rest.classes ? rest.classes : ""}`} {...rest}>
             <div className={`${styles["container"]}`}>
                 <div className={`${styles["section-" + content]}`}>{children}</div>
             </div>
@@ -29,7 +27,3 @@ export {
     Layout as default,
     Section
 };
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
-}
