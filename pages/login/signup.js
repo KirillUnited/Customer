@@ -89,6 +89,7 @@ function SignUp() {
                                             width={20}
                                             height={20}
                                             className={`${styles["form-input-icon"]}`}
+                                            alt=""
                                         />
                                     </FormInput>
                                 </>

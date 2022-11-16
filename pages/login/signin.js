@@ -55,6 +55,7 @@ export default function SignIn() {
                                             width={20}
                                             height={20}
                                             className={`${styles["form-input-icon"]}`}
+                                            alt=""
                                         />
                                     </FormInput>
                                 </>

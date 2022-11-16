@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import logo from "../images/icons/logo.svg";
 
 const Footer = () => {
     return (
@@ -6,7 +8,7 @@ const Footer = () => {
             <div className="qkt-container">
                 <div className="qkt-flex qkt-justify-content-between qkt-bg-white qkt-pl-5 qkt-pr-5">
       <span>
-        <img src="../images/icons/logo.svg" className="qkt-logo"/>
+        <Image src={logo} className="qkt-logo" width={179} height={50} alt={"logo"}/>
       </span>
                     <span className="qkt-flex qkt-flex-grow-1 qkt-align-items-center qkt-justify-content-right">
         <span className="qkt-mr-3 qkt-font-3">Ready to create an event?</span> <a href="#"
@@ -44,13 +46,13 @@ const Footer = () => {
                     <span>
         <h5 className="qkt-green qkt-m-0">Follow</h5>
         <span className="qkt-mt-3" style={{lineHeight: '2.5rem'}}>
-          <a href="http://www.linkedin.com/company/2350818" target="_blank"><span
+          <a href="http://www.linkedin.com/company/2350818" target="_blank" rel='noreferrer'><span
               className="icon-qkt-social-ln qkt-green qkt-mr-5"/></a>
-          <a href="https://twitter.com/QuicketSA" target="_blank"><span
+          <a href="https://twitter.com/QuicketSA" target="_blank" rel='noreferrer'><span
               className="icon-qkt-social-twitter qkt-green qkt-mr-5"/></a>
-          <a href="https://www.instagram.com/quicket" target="_blank"><span
+          <a href="https://www.instagram.com/quicket" target="_blank" rel='noreferrer'><span
               className="icon-qkt-social-instagram qkt-green qkt-mr-5"/></a>
-          <a href="https://www.facebook.com/203195039742896" target="_blank"><span
+          <a href="https://www.facebook.com/203195039742896" target="_blank" rel='noreferrer'><span
               className="icon-qkt-social-fb qkt-green"/></a>
         </span>
       </span>
